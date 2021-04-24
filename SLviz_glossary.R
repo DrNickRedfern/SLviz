@@ -11,8 +11,8 @@ glossary_panel <- tabPanel(
     "the median value in seconds of the pairwise differences between shot lengths in two films."),
   p(tags$a(href = "https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics", tags$b("Cliff's d:")), 
     "a measure of the tendency for shots in one film to have greater duration than those of another film, with range [-1, 1] and stochastic equality between two distributions at d = 0."), 
-  p(tags$b("SLviz")," arranges selected films alphabetically when summarising the data for two films or for three to six films. This means that positive values for the Hodges-Lehmann difference and Cliff's d indicate that shots in the first film alphabetically 
-    tend the be greater than those in the other film."),
+  p(tags$b("SLviz")," arranges selected films alphabetically when summarising the data for two films or for three to six films. This means that positive values for the Hodges-Lehmann difference and Cliff's d indicate that shots in the first film alphabetically (Film 1)
+    tend the be greater than those in the other film (Film 2)."),
   p("When comparing two groups of films, the pairwise differences are calculated as Group A - Group B and plotted as a", tags$a(href = "https://en.wikipedia.org/wiki/Heat_map", tags$b("heatmap")), " so that positive values indicate that 
     the film from Group A tends to have shots of greater duration than the film from Group B."),
   tags$hr(style = "border-color: purple;"),
