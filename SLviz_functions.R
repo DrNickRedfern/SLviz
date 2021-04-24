@@ -516,7 +516,7 @@ quan_group_diff_plot <- function(x, y){
   df_y <- y %>% group_by(Title) %>%
     summarise(quantile = seq(0.05, 0.95, 0.05), length = quantile(SL, seq(0.05, 0.95, 0.05)))
   
-  # re-arrange data to wide format expected by q_diff
+  # re-arrange data to wide format expected by qdiff
   df_a <- df_x %>% pivot_wider(names_from = quantile, values_from = length)
   df_b <- df_y %>% pivot_wider(names_from = quantile, values_from = length)
   
