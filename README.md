@@ -1,10 +1,14 @@
 # SLviz
-A shiny app for visualising motion picture shot length data
+As a motion picture typically comprises several hundred (if not thousands) of shots, discussion of its editing style can be challenging. Visualising the editing of a film is the best way of making the wealth of editing information available in a film manageable.
 
-It will be necessary to run some code to set up **SLviz**, but you can just copy the code in the instructions below and paste it into the console in RStudio and hit `Enter`. Once the app is running, no further coding is required.
+The use of data visualisation should be common practice in the study of film style as means of simplifying the description of editing data, allowing us to to look deeper into that data, and to share the results.
+
+**SLviz** is a Shiny app for visualising motion picture shot length data implemented using the R statistical programming language that lets you choose from a range of visualisations in order to describe and analyse your shot length data, and to communicate your results.
+
+![SLviz_demo](/images/SLviz_demo.png)
 
 ## Installation and setup
-**SLviz** is a Shiny app - that is, it uses the Shiny application to provide an interactive way of using the R statistical programming language.
+It will be necessary to run some code to set up **SLviz**, but you can just copy the code in the instructions below and paste it into the console in RStudio and hit `Enter`. Once the app is running, no further coding is required.
 
 Before using **SLviz** for the first time you will need to:
 
@@ -15,7 +19,7 @@ Before using **SLviz** for the first time you will need to:
 All of the software required to run **SLviz** is freely available.
 
 ### Step 1: install R
-To download R, go to the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org), and download andinstall the latest version of R appropriate to your system.
+To download R, go to the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org), and download and install the latest version of R appropriate to your system.
 
 ### Step 2: install RStudio
 RStudio is an integrated development environment (IDE) for R. Install the latest release of RStudio for your system available from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/).
@@ -51,15 +55,19 @@ The data should be in *wide format*, with one column of shot length data per fil
 **SLviz** has a glossary containing brief descriptions of the different summaries and visualisations available. Click on the name of a summary or visualisation to learn more.
 
 ### Visualisations
+You can visualise either the distribution of shot lengths or the time series of editing in a single film , in two films , or in three to six films. To visualise more than six films it is advisable to break the overall number of films into smaller groups and produce a plot for each group. This will ensure the plots will retain a good level of clarity.
+
+Two groups of films can also be visualised by selecting different groups of films from a single csv file. Results will be bsaed on groups rather than on individual films.
+
+The visualisations you can select from include adjusted boxplots, kernel desnities, histograms, empirical cumulative distribution functions, quantile comparison plots, heatmaps, multiple loess smoothers, and counting process plots.
+
+### Summaries
+In addition to visualising your shot length data, **SLviz** will also return the five-number summary for each film. For pairwise comparisons of shot length data, [Cliff's *d*](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics) statistic is returned as a measure of the extent to which shots in one film tend to have longer duration than shots in another film, along with the [Hodges-Lehmann difference](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics).
 
 ### Downloading plots
 To download a plot of your data, click on the *Download plot as pdf file* button. 
 
-Plots are downloaded as pdf files with a resolution of 600 dpi. 
-
-All plots will have a width of 15.92 centimeters so that they will fit onto an A4 page with margins of 2.54 cm (or one inch).
-
-Depending on the visualisation selected, the height of a plot varies between 10.2 and 21.0 centimeters. Again, this is so they will fit onto an A4 page assuming 2.54 cm (one inch) margins and leave enough room for a figure caption.
+All plots will have a width of 15.92 centimetres so that they will fit onto an A4 page with margins of 2.54 cm (or one inch). Depending on the visualisation selected, the height of a plot varies between 10.2 and 21.0 centimetres. Again, this is so they will fit onto an A4 page assuming 2.54 cm (one inch) margins and leave enough room for a figure caption. Plots are downloaded as pdf files with a resolution of 600 dpi.
 
 All of the plots in **SLviz** use the viridis colour palette and so will convert nicely to grayscale if required for publication.
 
