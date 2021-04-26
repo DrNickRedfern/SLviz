@@ -24,7 +24,7 @@ intro_panel <- tabPanel(
     tags$b("single film"), ", in ", tags$b("two films"), ", or in ", tags$b("three to six"), "films. 
     To visualise more than six films it is advisable to break the overall number of films into smaller groups and produce a plot for each group. 
     This will ensure the plots will retain a good level of clarity."),
-  p(tags$b("Two groups"), "of films can also be visualised by selecting different groups of films from a single csv file. Results will be bsaed on groups rather than on individual films."),
+  p(tags$b("Two groups"), "of films can also be visualised by selecting different groups of films from a single csv file. Results will be based on groups rather than on individual films."),
   p("The ", tags$b("glossary"), "contains brief descriptions of each of the summaries and visualisations available in ", tags$b("SLviz"), "."),
   
   tags$hr(style = "border-color: purple;"),
