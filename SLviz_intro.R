@@ -30,6 +30,6 @@ intro_panel <- tabPanel(
   tags$hr(style = "border-color: purple;"),
   tags$h4("Citing ", tags$b("SLviz")),
   p("If you find", tags$b("SLviz")," useful as part of your research, please cite the app using the following reference:"),
-  tags$li("Redfern, N. (2021) SLviz: visualising motion picture shot lengths."),
+  tags$li("Redfern, N. (2021) SLviz (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.4720009"),
   tags$br()
 )
