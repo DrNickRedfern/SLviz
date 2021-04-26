@@ -74,4 +74,4 @@ All of the plots in **SLviz** use the viridis colour palette and so will convert
 ### Citing **SLviz**
 If you use **SLviz** in your research please use the following citation:
 
-  * Redfern, N. (2021) SLviz (version 0.1.0).
+  * Redfern, N. (2021) SLviz (Version v0.1.0). Zenodo. [http://doi.org/10.5281/zenodo.4720009](http://doi.org/10.5281/zenodo.4720009)
