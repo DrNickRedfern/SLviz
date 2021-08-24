@@ -148,7 +148,7 @@ adjkde_plot <- function(x){
 
 adjbox_M_plot <- function(x){
   
-  # get overall minimum and maximum shit length to set axis limits
+  # get overall minimum and maximum shot length to set axis limits
   x_min <- min(x$SL); x_max <- max(x$SL)
   
   # set number of colours in palette
