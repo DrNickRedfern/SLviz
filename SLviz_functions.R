@@ -56,9 +56,7 @@ group_sl_sum <- function(x){
 dom_tab <- function(x){
   
   # nest data
-  dataNested <- x %>%
-    group_by(Title) %>%
-    nest()
+  dataNested <- x %>% group_by(Title) %>% nest()
   
   # get number of pairwise comparisons to perform
   k <- as.data.frame(combinations(1:n_distinct(x$Title), 2))
@@ -67,8 +65,10 @@ dom_tab <- function(x){
   for (i in 1:length(k$V1)){
     name1 <- dataNested$Title[k$V1[i]]
     name2 <- dataNested$Title[k$V2[i]]
-    hld <- HodgesLehmann(dataNested$data[[k$V1[i]]]$SL, dataNested$data[[k$V2[i]]]$SL, conf.level = 0.95)[1]
-    d <- dmes(dataNested$data[[k$V2[i]]]$SL, dataNested$data[[k$V1[i]]]$SL)$dc
+    
+    res <- wilcox.test(dataNested$data[[k$V1[i]]]$SL, dataNested$data[[k$V2[i]]]$SL, conf.int = TRUE)
+    hld <- res$estimate
+    d <- 2 * (res$statistic/(length(dataNested$data[[k$V1[i]]]$SL) * length(dataNested$data[[k$V2[i]]]$SL))) - 1
     df_a <- data.frame(F1 = name1, F2 = name2, 
                        HLD = format(round(hld, 2), nsmall = 2), 
                        cd = format(round(d, 2), nsmall = 2))
@@ -148,7 +148,7 @@ adjkde_plot <- function(x){
 
 adjbox_M_plot <- function(x){
   
-  # get overall minimum and maximum shot length to set axis limits
+  # get overall minimum and maximum shit length to set axis limits
   x_min <- min(x$SL); x_max <- max(x$SL)
   
   # set number of colours in palette
@@ -516,7 +516,7 @@ quan_group_diff_plot <- function(x, y){
   df_y <- y %>% group_by(Title) %>%
     summarise(quantile = seq(0.05, 0.95, 0.05), length = quantile(SL, seq(0.05, 0.95, 0.05)))
   
-  # re-arrange data to wide format expected by qdiff
+  # re-arrange data to wide format expected by q_diff
   df_a <- df_x %>% pivot_wider(names_from = quantile, values_from = length)
   df_b <- df_y %>% pivot_wider(names_from = quantile, values_from = length)
   
@@ -605,7 +605,9 @@ cd_heatmap <- function(x, y, label_x = "", label_y = ""){
     for (j in 1:length(dataNestedy$Title)){
     name1 <- dataNestedx$Title[i]
     name2 <- dataNestedy$Title[j]
-    d <- dmes(dataNestedy$data[[j]]$SL, dataNestedx$data[[i]]$SL)$dc
+    res <- wilcox.test(dataNestedy$data[[j]]$SL, dataNestedx$data[[i]]$SL, conf.int = TRUE)
+    d <- 2 * (res$statistic/(length(dataNestedy$data[[j]]$SL) * length(dataNestedx$data[[i]]$SL))) - 1
+    # d <- dmes(dataNestedy$data[[j]]$SL, dataNestedx$data[[i]]$SL)$dc
     df_a <- data.frame(F1 = name1, F2 = name2, 
                        cd = d)
     df_t <- rbind.data.frame(df_t, df_a)
@@ -638,7 +640,8 @@ hld_heatmap <- function(x, y, label_x = "", label_y = ""){
     for (j in 1:length(dataNestedy$Title)){
       name1 <- dataNestedx$Title[i]
       name2 <- dataNestedy$Title[j]
-      hld <- HodgesLehmann(dataNestedx$data[[i]]$SL, dataNestedy$data[[j]]$SL, conf.level = 0.95)[1]
+      hld <- wilcox.test(dataNestedy$data[[j]]$SL, dataNestedx$data[[i]]$SL, 
+                         conf.int = TRUE)$estimate
       df_a <- data.frame(F1 = name1, F2 = name2, 
                          HLD = hld)
       df_t <- rbind.data.frame(df_t, df_a)
