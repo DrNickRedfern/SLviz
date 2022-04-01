@@ -34,7 +34,7 @@ install.packages(c("shiny", "shinycssloaders", "shinythemes", "robustbase", "tid
 ```
 
 **UPDATE (1 April 2022)** 
-Some of the packages requied by **SLViz** were removed from CRAN causing the app to lose functionality. This has now been resolved by removing the dependencies on those packages. The app is now fully functional, although it runs slightly slower.
+Some of the packages required by **SLViz** were removed from CRAN causing the app to lose functionality. This has now been resolved by removing the dependencies on those packages. The app is now fully functional, although it runs slightly slower.
 
 ## Running SLviz
 
