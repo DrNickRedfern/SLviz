@@ -30,7 +30,7 @@ intro_panel <- tabPanel(
   tags$hr(style = "border-color: purple;"),
   tags$h4("Citing ", tags$b("SLviz")),
   p("If you find", tags$b("SLviz")," useful as part of your research, please cite the app using the following reference:"),
-  p("Redfern, N. (2021) SLviz (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.4720009.", tags$br(), 
+  p("Redfern, N. (2021) SLviz (Version v0.2.0). Zenodo. http://doi.org/10.5281/zenodo.4720009.", tags$br(), 
           tags$a(href = "http://doi.org/10.5281/zenodo.4720009", 
           img(src="https://zenodo.org/badge/DOI/10.5281/zenodo.4720009.svg"))),
   tags$br()
