@@ -3,7 +3,7 @@ about_panel <- tabPanel(
   
   titlePanel("SLviz"),
   
-  p("Version: 0.2.0 (April 2022)"),
+  p("Version: 0.3.0 (November 2022)"),
   p("Access the code for this app on Github:"),
   p(tags$i(
     class = "fa fa-github-square", 
