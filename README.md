@@ -11,9 +11,9 @@ The use of data visualisation should be common practice in the study of film sty
 
 ### Download SLviz as an executable (Windows only)
 SLviz is now available as an executable file for Windows. Download the exe file and install in your desired directory (NB: requires administrator privileges to install). Please this will also install R 4.2.1 if required along with the packages required for R and the app to run.
-Open the releases page of the app’s GitHub repository and click the `setup_SLviz.exe` to download the file.
+Open the [releases](https://github.com/DrNickRedfern/SLviz/releases/tag/v0.3.0) page of the app’s GitHub repository and click the `setup_SLviz.exe` to download the file.
 
-### Runt he app from GitHub
+### Run the app from GitHub
 It will be necessary to run some code to set up **SLviz**, but you can just copy the code in the instructions below and paste it into the console in RStudio and hit `Enter`. Once the app is running, no further coding is required.
 
 Before using **SLviz** for the first time you will need to:
