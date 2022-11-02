@@ -7,7 +7,13 @@ The use of data visualisation should be common practice in the study of film sty
 
 ![SLviz_demo](/images/SLviz_demo.png)
 
-## Installation and setup
+## Set up and use the app
+
+### Download SLviz as an executable (Windows only)
+SLviz is now available as an executable file for Windows. Download the exe file and install in your desired directory (NB: requires administrator privileges to install). Please this will also install R 4.2.1 if required along with the packages required for R and the app to run.
+Open the releases page of the app’s GitHub repository and click the setup_SLviz.exe to download the file.
+
+### Runt he app from GitHub
 It will be necessary to run some code to set up **SLviz**, but you can just copy the code in the instructions below and paste it into the console in RStudio and hit `Enter`. Once the app is running, no further coding is required.
 
 Before using **SLviz** for the first time you will need to:
@@ -18,32 +24,31 @@ Before using **SLviz** for the first time you will need to:
 
 All of the software required to run **SLviz** is freely available.
 
-### Step 1: install R
+#### Step 1: install R
 To download R, go to the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org), and download and install the latest version of R appropriate to your system.
 
-### Step 2: install RStudio
+#### Step 2: install RStudio
 RStudio is an integrated development environment (IDE) for R. Install the latest release of RStudio for your system available from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/).
  
 Once installed, open RStudio to complete the next step.
 
-### Step 3: install the required packages
+#### Step 3: install the required packages
 Packages extend the functionality of R, and in order to run **SLviz** you will need to install a set of packages in order for the app to work. Paste the code below into the console in RStudio and hit `Enter`.
 
 ```R
 install.packages(c("shiny", "shinycssloaders", "shinythemes", "robustbase", "tidyverse", "viridis", "ggpubr", "arrangements", "ggtext"))
 ```
 
-**UPDATE (1 April 2022)** 
-Some of the packages required by **SLViz** were removed from CRAN causing the app to lose functionality. This has now been resolved by removing the dependencies on those packages. The app is now fully functional, although it runs slightly slower.
+You only need to complete steps 1 through 3 the first time you run **SLviz**.
 
-## Running SLviz
-
-### Start the app
+#### Step 4: start the app
 You can run **SLviz** by opening RStudio and pasting the following code into the console in and hitting `Enter`.
 
 ```R
 shiny::runGitHub("SLviz", "DrNickRedfern", ref = "main")
 ```
+
+## Running SLviz
 
 ### Upload some data
 **SLviz** needs data and so the first step is to upload a *csv* file containing the shot length data for one or more films. **SLviz** will accept comma, tab, or semi-colon separated csv files. Uploading other file types (such as Excel spreadsheets with xls or xlsx extensions) to **SLviz** will return an error.
@@ -77,4 +82,4 @@ All of the plots in **SLviz** use the viridis colour palette and so will convert
 ### Citing **SLviz**
 If you use **SLviz** in your research please use the following citation:
 
-  * Redfern, N. (2021) SLviz (Version v0.1.0). Zenodo. [http://doi.org/10.5281/zenodo.4720009](http://doi.org/10.5281/zenodo.4720009)
+  * Redfern, N. (2021) SLviz (Version v0.3.0). Zenodo. [http://doi.org/10.5281/zenodo.4720009](http://doi.org/10.5281/zenodo.4720009)
