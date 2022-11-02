@@ -30,7 +30,7 @@ Once installed, open RStudio to complete the next step.
 Packages extend the functionality of R, and in order to run **SLviz** you will need to install a set of packages in order for the app to work. Paste the code below into the console in RStudio and hit `Enter`.
 
 ```R
-install.packages(c("shiny", "shinycssloaders", "shinythemes", "robustbase", "tidyverse", "viridis", "ggpubr", "arrangements"))
+install.packages(c("shiny", "shinycssloaders", "shinythemes", "robustbase", "tidyverse", "viridis", "ggpubr", "arrangements", "ggtext"))
 ```
 
 **UPDATE (1 April 2022)** 
