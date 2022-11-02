@@ -7,6 +7,7 @@ library(tidyverse)
 library(viridis)
 library(ggpubr)
 library(arrangements)
+library(ggtext)
 
 # source functions
 source("SLviz_functions.R")
