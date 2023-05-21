@@ -76,7 +76,7 @@ Two groups of films can also be visualised by selecting different groups of film
 The visualisations you can select from include adjusted boxplots, kernel densities, histograms, empirical cumulative distribution functions, quantile comparison plots, heatmaps, multiple loess smoothers, and counting process plots.
 
 ### Summaries
-In addition to visualising your shot length data, **SLviz** will also return the five-number summary for each film. For pairwise comparisons of shot length data, [Cliff's *d*](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics) statistic is returned as a measure of the extent to which shots in one film tend to have longer duration than shots in another film, along with the [Hodges-Lehmann difference](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics).
+In addition to visualising your shot length data, **SLviz** will also return the five-number summary for each film. For pairwise comparisons of shot length data, [Cliff's *d*](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics) statistic is returned as a measure of the extent to which shots in one film tend to have longer duration than shots in another film, along with the [Hodges-Lehmann difference](https://www.academia.edu/8551326/Comparing_the_Shot_Length_Distributions_of_Motion_Pictures_Using_Dominance_Statistics). 
 
 ### Downloading plots
 To download a plot of your data, click on the *Download plot as pdf file* button. 
